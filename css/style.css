@@ -502,7 +502,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-container .background {
-  min-height: 300px;
+  min-height: 400px;
   background: url(../img/about-img.png) center top no-repeat;
   margin-bottom: 10px;
 }
