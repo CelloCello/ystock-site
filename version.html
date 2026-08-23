@@ -1,190 +1,281 @@
-
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="img/favicon.png">
-
-    <title>yStock - 看股票的瀏覽器套件</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-    <link href="css/privacy.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="yStock 從 v1.1.0 至 v2.6 的完整版本更新歷史。" />
+    <meta name="theme-color" content="#1d2633" />
+    <link rel="canonical" href="https://ystock.tw/version.html" />
+    <link rel="icon" href="/img/ystock-logo.png" />
+    <link rel="apple-touch-icon" href="/img/ystock-logo.png" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>版本歷史 — yStock</title>
   </head>
-
   <body>
-
-    <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/">yStock</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#call-to-action">下載安裝</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <a class="skip-link" href="#main">跳至主要內容</a>
+    <header class="site-header">
+      <div class="shell nav">
+        <a class="brand" href="/" aria-label="yStock 首頁">
+          <img class="brand-logo" src="/img/ystock-logo.png" width="16" height="16" alt="" />
+          <span>yStock</span>
+        </a>
+        <nav class="nav-links" aria-label="主要導覽">
+          <a class="nav-link" href="/#features">特色</a>
+          <a class="nav-link" href="/guide.html">使用教學</a>
+          <a class="nav-link" href="/#donate">贊助</a>
+          <a class="nav-link" aria-current="page" href="/version.html">版本歷史</a>
+          <a class="nav-link" href="/privacy.html">隱私權</a>
+        </nav>
+        <a
+          class="button button-primary nav-cta"
+          href="https://chromewebstore.google.com/detail/ystock/kdfomaiafhgjpidlcfhfpifmleaiacji"
+          target="_blank"
+          rel="noreferrer"
+        >免費安裝</a>
+      </div>
     </header>
 
-    <!-- Begin page content -->
-    <article class="container">
-      <h1>版本歷史</h1>
-
-      <section>
-        <h3>v2.5.2</h3>
-        <h5>2023/12/15</h5>
-        <ul>
-          <li>[fix] 修正擷取不到股價資料的問題</li>
-        </ul>
-
-        <h3>v2.5.1</h3>
-        <h5>2022/9/2</h5>
-        <ul>
-          <li>[fix] 修正美股資料擷取不到的問題</li>
-        </ul>
-
-        <h3>v2.5.0</h3>
-        <h5>2022/6/9</h5>
-        <ul>
-          <li>[add] 當日走勢圖 (小圖/詳細)</li>
-          <li>[add] 相關個股新聞 (台股)</li>
-          <li>[add] 選項新增 (高度、列表樣式調整)</li>
-          <li>[fix] 程式重構，提升效率以及增強錯誤處理</li>
-          <li>[fix] 更新 Manifest 至 V3</li>
-        </ul>
-
-        <h3>v2.4.1</h3>
-        <h5>2021/4/6</h5>
-        <ul>
-          <li>[fix] 修正五檔資訊位置</li>
-          <li>[fix] 漲跌符號補回</li>
-          <li>[fix] 修正連結失效</li>
-          <li>[fix] 增強錯誤處理</li>
-        </ul>
-
-        <h3>v2.4.0</h3>
-        <h5>2021/3/28</h5>
-        <ul>
-          <li>[add] 支援美股</li>
-          <li>[add] 新增深色主題</li>
-          <li>[fix] 修正 yahoo 頁面擷取問題</li>
-          <li>[fix] 修正大盤資料擷取問題</li>
-          <li>[fix] 增強錯誤處理，減少卡住情況</li>
-          <li>[fix] 分頁數量調整為 7 頁</li>
-          <li>[fix] 底層改進增進解析效率，縮小檔案</li>
-        </ul>
-        <div>
-          終於推出了這一個大改版，yahoo 的介面改版讓我整個計畫都亂了...<br>
-          不過除了修正擷取外，還是順利的完成了底層升級、深色主題、以及支援美股<br>
-          分頁也順勢增加為七頁，讓大家台股美股都能一把抓！<br>
-          效能也提升了些，希望對大家有幫助啊～<br>
-          <br>
-          小技巧：<br>
-          如果想要加入大盤，可以搜尋並加入 <b>^TWII</b>，同理可以試試許多 <b>^</b> 開頭的東西<br>
+    <main id="main">
+      <header class="page-hero">
+        <div class="shell">
+          <p class="eyebrow">Changelog</p>
+          <h1>每一次更新，都留下來。</h1>
+          <p class="page-lead">
+            從最初的五個分頁，到深色主題、美股與期貨。這裡完整保留 yStock 的改版紀錄。
+          </p>
         </div>
+      </header>
 
-        <h3>v2.3.3</h3>
-        <h5>2019/1/13</h5>
-        <ul>
-          <li>[fix] 修正 yahoo 頁面擷取問題</li>
-          <li>[fix] 調整漲跌符號，使其能看出漲/跌停</li>
-        </ul>
+      <section class="section">
+        <div class="shell">
+          <div class="version-list">
+            <article class="release" id="v2-6-0">
+              <div class="release-tag">v2.6.0<span>開發中</span></div>
+              <div>
+                <h2>新一代 yStock <span class="release-status">大改版</span></h2>
+                <ul class="change-list">
+                  <li><span class="change-kind">add</span>支援 Yahoo 台灣期貨商品搜尋、報價與詳細資訊</li>
+                  <li><span class="change-kind">add</span>台股、美股與期貨可放在同一份自選清單</li>
+                  <li><span class="change-kind">add</span>重新設計清單、搜尋、詳細資料與設定介面</li>
+                  <li><span class="change-kind">add</span>期貨走勢圖與相關新聞</li>
+                  <li><span class="change-kind fix">fix</span>搜尋或更新失敗時保留既有可用資料</li>
+                  <li><span class="change-kind fix">fix</span>更新底層建置與瀏覽器擴充功能架構</li>
+                </ul>
+                <p class="release-note">
+                  v2.6 是一次完整重整，目標是在不犧牲速度的前提下，讓 yStock 能穩定承載更多市場商品。正式上架日期會在版本發布後補上。
+                </p>
+              </div>
+            </article>
 
-        <h3>v2.3.2</h3>
-        <h5>2018/12/23</h5>
-        <ul>
-          <li>[fix] 修正 yahoo 頁面擷取問題</li>
-          <li>[fix] 修正因為擷取錯誤而洗掉資料的問題</li>
-        </ul>
-        <div>
-          之前會因為擷取失敗出現「此股票不存在」的情況<br>
-          而在此情況下切換分頁會造成資料遺失<br>
-          若更新至 v2.3.2 後還是有「此股票不存在」的情況時<br>
-          麻煩將所有資料刪除再重新建立<br>
-          真的非常抱歉 QQ<br>
+            <article class="release" id="v2-5-2">
+              <div class="release-tag">v2.5.2<span>2023/12/15</span></div>
+              <div>
+                <h2>行情擷取修正</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind fix">fix</span>修正擷取不到股價資料的問題</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-5-1">
+              <div class="release-tag">v2.5.1<span>2022/9/2</span></div>
+              <div>
+                <h2>美股資料修正</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind fix">fix</span>修正美股資料擷取不到的問題</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-5-0">
+              <div class="release-tag">v2.5.0<span>2022/6/9</span></div>
+              <div>
+                <h2>走勢圖與新聞</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind">add</span>當日走勢圖（小圖／詳細）</li>
+                  <li><span class="change-kind">add</span>相關個股新聞（台股）</li>
+                  <li><span class="change-kind">add</span>選項新增（高度、列表樣式調整）</li>
+                  <li><span class="change-kind fix">fix</span>程式重構，提升效率以及增強錯誤處理</li>
+                  <li><span class="change-kind fix">fix</span>更新 Manifest 至 V3</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-4-1">
+              <div class="release-tag">v2.4.1<span>2021/4/6</span></div>
+              <div>
+                <h2>五檔與連結修正</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind fix">fix</span>修正五檔資訊位置</li>
+                  <li><span class="change-kind fix">fix</span>漲跌符號補回</li>
+                  <li><span class="change-kind fix">fix</span>修正連結失效</li>
+                  <li><span class="change-kind fix">fix</span>增強錯誤處理</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-4-0">
+              <div class="release-tag">v2.4.0<span>2021/3/28</span></div>
+              <div>
+                <h2>美股與深色主題</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind">add</span>支援美股</li>
+                  <li><span class="change-kind">add</span>新增深色主題</li>
+                  <li><span class="change-kind fix">fix</span>修正 Yahoo 頁面擷取問題</li>
+                  <li><span class="change-kind fix">fix</span>修正大盤資料擷取問題</li>
+                  <li><span class="change-kind fix">fix</span>增強錯誤處理，減少卡住情況</li>
+                  <li><span class="change-kind fix">fix</span>分頁數量調整為 7 頁</li>
+                  <li><span class="change-kind fix">fix</span>底層改進增進解析效率，縮小檔案</li>
+                </ul>
+                <p class="release-note">
+                  終於推出了這一個大改版，Yahoo 的介面改版讓我整個計畫都亂了。不過除了修正擷取外，還是順利完成了底層升級、深色主題以及支援美股。分頁也順勢增加為七頁，讓大家台股美股都能一把抓！效能也提升了些，希望對大家有幫助啊～<br /><br />
+                  小技巧：如果想要加入大盤，可以搜尋並加入 <strong>^TWII</strong>，同理可以試試許多 <strong>^</strong> 開頭的東西。
+                </p>
+              </div>
+            </article>
+
+            <article class="release" id="v2-3-3">
+              <div class="release-tag">v2.3.3<span>2019/1/13</span></div>
+              <div>
+                <h2>Yahoo 擷取與漲跌符號</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind fix">fix</span>修正 Yahoo 頁面擷取問題</li>
+                  <li><span class="change-kind fix">fix</span>調整漲跌符號，使其能看出漲／跌停</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-3-2">
+              <div class="release-tag">v2.3.2<span>2018/12/23</span></div>
+              <div>
+                <h2>避免擷取錯誤洗掉資料</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind fix">fix</span>修正 Yahoo 頁面擷取問題</li>
+                  <li><span class="change-kind fix">fix</span>修正因為擷取錯誤而洗掉資料的問題</li>
+                </ul>
+                <p class="release-note">
+                  之前會因為擷取失敗出現「此股票不存在」的情況，而在此情況下切換分頁會造成資料遺失。若更新至 v2.3.2 後還是有「此股票不存在」的情況時，麻煩將所有資料刪除再重新建立。真的非常抱歉 QQ
+                </p>
+              </div>
+            </article>
+
+            <article class="release" id="v2-3-1">
+              <div class="release-tag">v2.3.1<span>2018/12/21</span></div>
+              <div>
+                <h2>Yahoo 擷取修正</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind fix">fix</span>修正 Yahoo 頁面擷取問題</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-3-0">
+              <div class="release-tag">v2.3.0<span>2018/10/08</span></div>
+              <div>
+                <h2>Firefox 與匯入匯出</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind">add</span>支援 Firefox</li>
+                  <li><span class="change-kind">add</span>新增匯入／匯出功能</li>
+                </ul>
+                <p class="release-note">
+                  終於推出了 Firefox 版，也順便加上了匯出／匯入功能。如果有多機器需求或是有想要從 Chrome 換到 Firefox 的就可用用。點選「gear」分頁，按下「匯出」的話會將目前的資料列出，貼到要匯入的那方後按「匯入」資料就會進去了。
+                </p>
+              </div>
+            </article>
+
+            <article class="release" id="v2-2-2">
+              <div class="release-tag">v2.2.2<span>2018/10/04</span></div>
+              <div>
+                <h2>官方資訊</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind">add</span>加入官網、粉絲團、信箱資訊</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-2-1">
+              <div class="release-tag">v2.2.1</div>
+              <div>
+                <h2>最佳五檔修正</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind fix">fix</span>修正漲停跌停股最佳五檔壞掉的問題</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-2-0">
+              <div class="release-tag">v2.2.0</div>
+              <div>
+                <h2>拖曳排序</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind">add</span>拖曳排序功能</li>
+                  <li><span class="change-kind fix">fix</span>介面調整、隱藏刪除按鈕</li>
+                  <li><span class="change-kind fix">fix</span>最佳五檔小數顯示至第二位</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-1-0">
+              <div class="release-tag">v2.1.0</div>
+              <div>
+                <h2>股票資訊與最佳五檔</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind fix">fix</span>大幅改善讀取效率</li>
+                  <li><span class="change-kind">add</span>股票資訊、最佳五檔</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-0-1">
+              <div class="release-tag">v2.0.1</div>
+              <div>
+                <h2>搜尋效率</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind fix">fix</span>提升搜尋效率</li>
+                  <li><span class="change-kind fix">fix</span>bugs</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v2-0-0">
+              <div class="release-tag">v2.0.0</div>
+              <div>
+                <h2>分頁功能</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind">add</span>分頁功能，5 分頁供使用者自行分類</li>
+                  <li><span class="change-kind fix">fix</span>介面微調</li>
+                  <li><span class="change-kind fix">fix</span>bugs</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="release" id="v1-1-0">
+              <div class="release-tag">v1.1.0</div>
+              <div>
+                <h2>即時資訊與漲跌百分比</h2>
+                <ul class="change-list">
+                  <li><span class="change-kind">add</span>滑鼠滑過 icon 時會顯示上市、上櫃即時資訊</li>
+                  <li><span class="change-kind">add</span>漲跌百分比</li>
+                  <li><span class="change-kind fix">fix</span>介面微調</li>
+                  <li><span class="change-kind fix">fix</span>bugs</li>
+                </ul>
+              </div>
+            </article>
+          </div>
         </div>
-
-        <h3>v2.3.1</h3>
-        <h5>2018/12/21</h5>
-        <ul>
-          <li>[fix] 修正 yahoo 頁面擷取問題</li>
-        </ul>
-
-        <h3>v2.3.0</h3>
-        <h5>2018/10/08</h5>
-        <ul>
-          <li>[add] 支援 firefox</li>
-          <li>[add] 新增匯入/匯出功能</li>
-        </ul>
-        <div>
-          終於推出了 firefox 版，也順便加上了匯出/匯入功能。<br>
-          如果有多機器需求或是有想要從 chrome 換到 firefox 的就可用用。<br>
-          點選「<i class="fas fa-cog"></i>」分頁，按下「匯出」的話會將目前的資料列出，貼到要匯入的那方後按「匯入」資料就會進去了。<br>
-        </div>
-
-        <h3>v2.2.2</h3>
-        <h5>2018/10/04</h5>
-        <ul>
-          <li>[add] 加入官網、粉絲團、信箱資訊</li>
-        </ul>
-
-        <h3>v2.2.1</h3>
-        <ul>
-          <li>[fix] 修正漲停跌停股最佳五檔壞掉的問題</li>
-        </ul>
-
-        <h3>v2.2.0</h3>
-        <ul>
-          <li>[add] 拖曳排序功能</li>
-          <li>[fix] 介面調整、隱藏刪除按鈕</li>
-          <li>[fix] 最佳五檔小數顯示至第二位</li>
-        </ul>
-
-        <h3>v2.1.0</h3>
-        <ul>
-          <li>[fix] 大幅改善讀取效率</li>
-          <li>[add] 股票資訊、最佳五檔</li>
-        </ul>
-        
-        <h3>v2.0.1</h3>
-        <ul>
-          <li>[fix] 提升搜尋效率</li>
-          <li>[fix] bugs</li>
-        </ul>
-        
-        <h3>v2.0.0</h3>
-        <ul>
-          <li>[add] 分頁功能，5分頁供使用者自行分類</li>
-          <li>[fix] 介面微調</li>
-          <li>[fix] bugs</li>
-        </ul>
-        
-        <h3>v1.1.0</h3>
-        <ul>
-          <li>[add] 滑鼠滑過 icon 時會顯示上市、上櫃即時資訊</li>
-          <li>[add] 漲跌百分比</li>
-          <li>[fix] 介面微調</li>
-          <li>[fix] bugs</li>
-        </ul>
       </section>
-    </article>
+    </main>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <footer class="site-footer">
+      <div class="shell footer-layout">
+        <div class="footer-copy">© 2017–2026 yStock · 由 Wucha 持續維護</div>
+        <nav class="footer-links" aria-label="頁尾導覽">
+          <a href="/">首頁</a>
+          <a href="/guide.html">使用教學</a>
+          <a href="/privacy.html">隱私權</a>
+          <a href="mailto:wucha.tw@gmail.com">聯絡</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>
