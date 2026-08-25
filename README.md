@@ -1,6 +1,6 @@
 # yStock 官網
 
-yStock Chrome／Firefox 擴充功能的靜態官網。使用 Vite 多頁模式與 Tailwind CSS v4，不需要前端框架或伺服器端程式。
+yStock Chrome／Edge 擴充功能的靜態官網。使用 Vite 多頁模式與 Tailwind CSS v4，不需要前端框架或伺服器端程式。
 
 ## 開發
 
@@ -15,7 +15,7 @@ Vite 開發伺服器會提供：
 
 - `/`：首頁
 - `/guide.html`：使用教學
-- `/version.html`：版本歷史
+- `/version.html`：版本紀錄
 - `/privacy.html`：隱私權說明
 
 ### 本機 GA4 除錯

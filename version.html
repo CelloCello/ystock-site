@@ -2,44 +2,47 @@
 <html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content="yStock 從 v1.1.0 至 v2.6 的完整版本更新歷史。" />
     <meta name="theme-color" content="#1d2633" />
     <link rel="canonical" href="https://ystock.tw/version.html" />
     <link rel="icon" href="/img/ystock-logo.png" />
     <link rel="apple-touch-icon" href="/img/ystock-logo.png" />
     <link rel="stylesheet" href="/src/styles.css" />
-    <title>版本歷史 — yStock</title>
+    <title>版本紀錄 — yStock</title>
   </head>
   <body>
     <a class="skip-link" href="#main">跳至主要內容</a>
     <header class="site-header">
       <div class="shell nav">
         <a class="brand" href="/" aria-label="yStock 首頁">
-          <img class="brand-logo" src="/img/ystock-logo.png" width="16" height="16" alt="" />
+          <img class="brand-logo" src="/img/ystock-logo.png" width="24" height="24" alt="" />
           <span>yStock</span>
         </a>
-        <nav class="nav-links" aria-label="主要導覽">
-          <a class="nav-link" href="/#features">特色</a>
+        <nav class="nav-links nav-links-desktop" aria-label="主要導覽">
+          <a class="nav-link" href="/#features">產品特色</a>
           <a class="nav-link" href="/guide.html">使用教學</a>
-          <a class="nav-link" href="/#donate">贊助</a>
-          <a class="nav-link" aria-current="page" href="/version.html">版本歷史</a>
+          <a class="nav-link" aria-current="page" href="/version.html">版本紀錄</a>
           <a class="nav-link" href="/privacy.html">隱私權</a>
         </nav>
-        <a
-          class="button button-primary nav-cta"
-          href="https://chromewebstore.google.com/detail/ystock/kdfomaiafhgjpidlcfhfpifmleaiacji"
-          target="_blank"
-          rel="noreferrer"
-        >免費安裝</a>
+        <a class="button button-primary nav-cta" href="/#download">免費安裝</a>
+        <details class="mobile-nav">
+          <summary>選單</summary>
+          <nav class="mobile-nav-panel" aria-label="手機版主要導覽">
+            <a href="/#features">產品特色</a>
+            <a href="/guide.html">使用教學</a>
+            <a aria-current="page" href="/version.html">版本紀錄</a>
+            <a href="/privacy.html">隱私權</a>
+            <a class="mobile-nav-cta" href="/#download">免費安裝</a>
+          </nav>
+        </details>
       </div>
     </header>
 
     <main id="main">
       <header class="page-hero">
         <div class="shell">
-          <p class="eyebrow">Changelog</p>
-          <h1>每一次更新，都留下來。</h1>
+          <h1>版本紀錄</h1>
           <p class="page-lead">
             從最初的五個分頁，到深色主題、美股與期貨。這裡完整保留 yStock 的改版紀錄。
           </p>
@@ -50,7 +53,7 @@
         <div class="shell">
           <div class="version-list">
             <article class="release" id="v2-6-0">
-              <div class="release-tag">v2.6.0<span>開發中</span></div>
+              <div class="release-tag">v2.6.0<span>現行版本</span></div>
               <div>
                 <h2>新一代 yStock <span class="release-status">大改版</span></h2>
                 <ul class="change-list">
@@ -62,7 +65,7 @@
                   <li><span class="change-kind fix">fix</span>更新底層建置與瀏覽器擴充功能架構</li>
                 </ul>
                 <p class="release-note">
-                  v2.6 是一次完整重整，目標是在不犧牲速度的前提下，讓 yStock 能穩定承載更多市場商品。正式上架日期會在版本發布後補上。
+                  v2.6 是一次完整重整，目標是在不犧牲速度的前提下，讓 yStock 能穩定承載更多市場商品。
                 </p>
               </div>
             </article>
@@ -273,9 +276,11 @@
           <a href="/">首頁</a>
           <a href="/guide.html">使用教學</a>
           <a href="/privacy.html">隱私權</a>
+          <a href="/#donate">支持 yStock</a>
           <a href="mailto:wucha.tw@gmail.com">聯絡</a>
         </nav>
       </div>
     </footer>
+    <script type="module" src="/src/navigation.js"></script>
   </body>
 </html>

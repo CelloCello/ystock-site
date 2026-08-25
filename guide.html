@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
       content="yStock 使用教學：如何加入台股、美股、台灣加權指數與台指期，以及常用搜尋技巧。"
@@ -19,35 +19,38 @@
     <header class="site-header">
       <div class="shell nav">
         <a class="brand" href="/" aria-label="yStock 首頁">
-          <img class="brand-logo" src="/img/ystock-logo.png" width="16" height="16" alt="" />
+          <img class="brand-logo" src="/img/ystock-logo.png" width="24" height="24" alt="" />
           <span>yStock</span>
         </a>
-        <nav class="nav-links" aria-label="主要導覽">
-          <a class="nav-link" href="/#features">特色</a>
+        <nav class="nav-links nav-links-desktop" aria-label="主要導覽">
+          <a class="nav-link" href="/#features">產品特色</a>
           <a class="nav-link" aria-current="page" href="/guide.html">使用教學</a>
-          <a class="nav-link" href="/#donate">贊助</a>
-          <a class="nav-link" href="/version.html">版本歷史</a>
+          <a class="nav-link" href="/version.html">版本紀錄</a>
           <a class="nav-link" href="/privacy.html">隱私權</a>
         </nav>
-        <a
-          class="button button-primary nav-cta"
-          href="https://chromewebstore.google.com/detail/ystock/kdfomaiafhgjpidlcfhfpifmleaiacji"
-          target="_blank"
-          rel="noreferrer"
-        >免費安裝</a>
+        <a class="button button-primary nav-cta" href="/#download">免費安裝</a>
+        <details class="mobile-nav">
+          <summary>選單</summary>
+          <nav class="mobile-nav-panel" aria-label="手機版主要導覽">
+            <a href="/#features">產品特色</a>
+            <a aria-current="page" href="/guide.html">使用教學</a>
+            <a href="/version.html">版本紀錄</a>
+            <a href="/privacy.html">隱私權</a>
+            <a class="mobile-nav-cta" href="/#download">免費安裝</a>
+          </nav>
+        </details>
       </div>
     </header>
 
     <main id="main">
       <header class="page-hero">
         <div class="shell">
-          <p class="eyebrow">使用教學</p>
-          <h1>找到商品，建立自己的行情清單。</h1>
+          <h1>使用教學</h1>
           <p class="page-lead">
-            yStock 可以用代號或名稱搜尋。這裡從安裝後的第一筆自選開始，說明如何加入股票、大盤與台指期。
+            從第一筆自選開始，了解如何搜尋並加入股票、大盤與台指期。
           </p>
           <div class="page-meta">
-            <span>適用版本：v2.6</span>
+            <span>適用版本：目前版本</span>
             <span>閱讀時間：約 5 分鐘</span>
           </div>
         </div>
@@ -163,7 +166,7 @@
             <article class="docs-section" id="futures">
               <h2>如何查找台指期</h2>
               <p>
-                v2.6 新增 Yahoo 台灣期貨商品搜尋。想追蹤最近月份，可搜尋
+                yStock 支援 Yahoo 台灣期貨商品搜尋。想追蹤最近月份，可搜尋
                 <code class="inline-code">WTX&amp;</code>，它在 yStock 顯示為「台指期近一」。
               </p>
               <div class="query-demo" aria-label="搜尋台指期近一示意">
@@ -181,7 +184,7 @@
               </div>
               <figure>
                 <figcaption class="product-shot-label">
-                  <span>yStock v2.6 實際畫面</span>
+                  <span>yStock 實際畫面</span>
                   <span>台指期詳細資料</span>
                 </figcaption>
                 <div class="detail-shot">
@@ -189,7 +192,7 @@
                     src="/img/ystock-v26-futures.png"
                     width="848"
                     height="1178"
-                    alt="yStock v2.6 台指期近一詳細資料，包含價格、五檔與市場資訊"
+                    alt="yStock 台指期近一詳細資料，包含價格、五檔與市場資訊"
                   />
                 </div>
               </figure>
@@ -244,8 +247,7 @@
         <div class="shell">
           <div class="download-panel">
             <div class="download-copy">
-              <p class="section-kicker">準備好了嗎？</p>
-              <h2>加入第一個商品，剩下的就很直覺。</h2>
+              <h2>加入第一個商品，開始建立你的行情清單</h2>
             </div>
             <div class="download-actions">
               <a
@@ -254,7 +256,12 @@
                 target="_blank"
                 rel="noreferrer"
               >Chrome Web Store</a>
-              <a class="button button-secondary" href="/version.html">查看 v2.6 改了什麼</a>
+              <a
+                class="button button-secondary"
+                href="https://microsoftedge.microsoft.com/addons/detail/ystock/hcnkfnkkcaphgobjchbbcbomjppamfpn"
+                target="_blank"
+                rel="noreferrer"
+              >Microsoft Edge Add-ons</a>
             </div>
           </div>
         </div>
@@ -266,11 +273,13 @@
         <div class="footer-copy">© 2017–2026 yStock · 由 Wucha 持續維護</div>
         <nav class="footer-links" aria-label="頁尾導覽">
           <a href="/">首頁</a>
-          <a href="/version.html">版本歷史</a>
+          <a href="/version.html">版本紀錄</a>
           <a href="/privacy.html">隱私權</a>
+          <a href="/#donate">支持 yStock</a>
           <a href="mailto:wucha.tw@gmail.com">聯絡</a>
         </nav>
       </div>
     </footer>
+    <script type="module" src="/src/navigation.js"></script>
   </body>
 </html>
