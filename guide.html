@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
-      content="yStock 使用教學：如何加入台股、美股、台灣加權指數與台指期，以及常用搜尋技巧。"
+      content="yStock 使用教學：如何加入台股、美股、台灣加權指數與 Yahoo 台灣期貨商品，以及常用搜尋技巧。"
     />
     <meta name="theme-color" content="#1d2633" />
     <link rel="canonical" href="https://ystock.tw/guide.html" />
@@ -47,11 +47,11 @@
         <div class="shell">
           <h1>使用教學</h1>
           <p class="page-lead">
-            從第一筆自選開始，了解如何搜尋並加入股票、大盤與台指期。
+            從第一筆自選開始，了解如何搜尋並加入股票、大盤與台灣期貨。
           </p>
           <div class="page-meta">
             <span>適用版本：目前版本</span>
-            <span>閱讀時間：約 5 分鐘</span>
+            <span>閱讀時間：約 7 分鐘</span>
           </div>
         </div>
       </header>
@@ -63,7 +63,7 @@
             <a href="#quick-start">快速開始</a>
             <a href="#stocks">股票搜尋</a>
             <a href="#market-index">加入大盤</a>
-            <a href="#futures">查找台指期</a>
+            <a href="#futures">加入台灣期貨</a>
             <a href="#tips">搜尋技巧</a>
           </aside>
 
@@ -164,10 +164,10 @@
             </article>
 
             <article class="docs-section" id="futures">
-              <h2>如何查找台指期</h2>
+              <h2>如何加入台灣期貨</h2>
               <p>
-                yStock 支援 Yahoo 台灣期貨商品搜尋。想追蹤最近月份，可搜尋
-                <code class="inline-code">WTX&amp;</code>，它在 yStock 顯示為「台指期近一」。
+                yStock 可搜尋 Yahoo 台灣期貨目錄中的商品。一般追蹤行情時，建議先使用「近一」代號；例如輸入
+                <code class="inline-code">WTX&amp;</code>，就能找到「台指期近一」。
               </p>
               <div class="query-demo" aria-label="搜尋台指期近一示意">
                 <div class="query-bar">
@@ -182,6 +182,80 @@
                   <code>WTX&amp;</code>
                 </div>
               </div>
+
+              <h3>常用商品代號</h3>
+              <p>
+                代號尾端的 <code class="inline-code">&amp;</code> 代表近一，
+                <code class="inline-code">@</code> 代表近二。兩者會跟著 Yahoo 的近月、次近月合約輪替，適合長期放在自選清單。
+              </p>
+              <table class="comparison" aria-label="Yahoo 台灣期貨近一與近二代號">
+                <thead>
+                  <tr>
+                    <th scope="col">商品</th>
+                    <th scope="col">近一</th>
+                    <th scope="col">近二</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>台指期</td>
+                    <td><code class="inline-code">WTX&amp;</code></td>
+                    <td><code class="inline-code">WTX@</code></td>
+                  </tr>
+                  <tr>
+                    <td>小型台指</td>
+                    <td><code class="inline-code">WMT&amp;</code></td>
+                    <td><code class="inline-code">WMT@</code></td>
+                  </tr>
+                  <tr>
+                    <td>金融期</td>
+                    <td><code class="inline-code">WTF&amp;</code></td>
+                    <td><code class="inline-code">WTF@</code></td>
+                  </tr>
+                  <tr>
+                    <td>電子期</td>
+                    <td><code class="inline-code">WTE&amp;</code></td>
+                    <td><code class="inline-code">WTE@</code></td>
+                  </tr>
+                  <tr>
+                    <td>非金電</td>
+                    <td><code class="inline-code">WXI&amp;</code></td>
+                    <td><code class="inline-code">WXI@</code></td>
+                  </tr>
+                  <tr>
+                    <td>櫃買期</td>
+                    <td><code class="inline-code">WGT&amp;</code></td>
+                    <td><code class="inline-code">WGT@</code></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="callout">
+                <strong>不知道該選哪一個？</strong>
+                <p>
+                  想看最接近目前交易月份的行情，先選近一。只有需要比較下一個月份時，再加入近二。
+                </p>
+              </div>
+
+              <h3>搜尋並加入</h3>
+              <ol class="step-list">
+                <li>
+                  <strong>選擇商品與月份</strong>
+                  <span>例如台指期近一使用 <code class="inline-code">WTX&amp;</code>，小型台指近一使用 <code class="inline-code">WMT&amp;</code>。</span>
+                </li>
+                <li>
+                  <strong>輸入完整代號</strong>
+                  <span>在搜尋欄保留尾端的 <code class="inline-code">&amp;</code> 或 <code class="inline-code">@</code>，特殊符號也是代號的一部分。</span>
+                </li>
+                <li>
+                  <strong>核對商品名稱</strong>
+                  <span>確認結果顯示正確的期貨種類與近一、近二月份，再加入目前分頁。</span>
+                </li>
+                <li>
+                  <strong>查看詳細資料</strong>
+                  <span>加入後點選清單項目，可查看支援的期貨報價、走勢與相關新聞。</span>
+                </li>
+              </ol>
+
               <figure>
                 <figcaption class="product-shot-label">
                   <span>yStock 實際畫面</span>
@@ -196,24 +270,17 @@
                   />
                 </div>
               </figure>
-              <ol class="step-list">
-                <li>
-                  <strong>直接輸入 <code class="inline-code">WTX&amp;</code></strong>
-                  <span>搜尋時保留尾端的 &amp; 符號；也可以嘗試輸入「台指期」。</span>
-                </li>
-                <li>
-                  <strong>選擇正確月份</strong>
-                  <span>近月連續商品與特定月份合約不同，加入前先核對結果名稱與代號。</span>
-                </li>
-                <li>
-                  <strong>查看期貨詳細資料</strong>
-                  <span>加入後點選清單項目，可查看支援的期貨報價、走勢與相關新聞。</span>
-                </li>
-              </ol>
+
               <div class="callout">
-                <strong>代號由行情來源決定</strong>
+                <strong>需要指定月份合約？</strong>
                 <p>
-                  yStock 依 Yahoo 台灣期貨目錄提供可搜尋商品。商品月份切換或來源調整時，請以搜尋結果顯示的名稱與代號為準。
+                  特定月份會使用不同代號，例如 <code class="inline-code">WTXU6</code> 代表 Yahoo 目錄中的台指期 2026 年 9 月合約。這類代號會隨合約月份改變，請從
+                  <a
+                    class="text-link"
+                    href="https://tw.stock.yahoo.com/future/futures.html?fumr=futurefull"
+                    target="_blank"
+                    rel="noreferrer"
+                  >Yahoo 台灣期貨完整目錄</a>複製最新代號，再貼到 yStock 搜尋。
                 </p>
               </div>
             </article>

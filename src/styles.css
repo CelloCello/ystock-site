@@ -723,6 +723,15 @@ a {
   letter-spacing: -0.04em;
 }
 
+.docs-section h3 {
+  margin: 2.75rem 0 0;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 760;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
 .docs-section > p,
 .prose p {
   max-width: 65ch;
