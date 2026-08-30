@@ -37,7 +37,13 @@ pnpm build
 pnpm preview
 ```
 
-建置結果位於 `dist/`，可直接部署到 GitHub Pages 或任何靜態網站服務。
+建置結果位於 `dist/`。
+
+## 發布至 GitHub Pages
+
+正式網站由 [GitHub Actions](.github/workflows/deploy.yml) 建置與發布。推送至 `master`
+時會自動將 `dist/` 部署至 GitHub Pages，也可以從 Actions 頁面手動觸發。
+`public/CNAME` 用於設定 `ystock.tw` custom domain。
 
 ## 靜態圖片
 
