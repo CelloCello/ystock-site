@@ -1,668 +1,271 @@
-<!DOCTYPE html>
-<html lang="en" prefix='og: http://ogp.me/ns#'>
-<head>
-  <meta charset="utf-8">
-  <title>yStock - 看股票的瀏覽器套件</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="yStock 讓你在瀏覽器快速查看台股、美股與台灣期貨，支援 Chrome 與 Edge。"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="yStock — 看股票的瀏覽器套件" />
+    <meta
+      property="og:description"
+      content="台股、美股與台灣期貨，一個瀏覽器面板快速查看。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ystock.tw/" />
+    <meta property="og:image" content="https://ystock.tw/img/ystock-v26-list.png" />
+    <link rel="canonical" href="https://ystock.tw/" />
+    <link rel="icon" href="/img/ystock-logo.png" />
+    <link rel="apple-touch-icon" href="/img/ystock-logo.png" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>yStock — 看股票的瀏覽器套件</title>
+  </head>
+  <body class="home-page">
+    <a class="skip-link" href="#main">跳至主要內容</a>
 
-  <!-- Facebook -->
-  <meta property="og:title" content="yStock - 方便看股票的小工具">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="yStock 為瀏覽器套件，目前支援 chrome/firefox，直接安裝即可使用。介面簡單好上手，是你上班偷看股票的好幫手！">
-  <meta property="og:url" content="https://ystock.tw/">
-  <meta property="og:image" content="//ystock.tw/img/preview/001.png">
-  <meta property="og:image" content="//ystock.tw/img/preview/002.png">
-  <meta property="og:image" content="//ystock.tw/img/preview/003.png">
-
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: Regna
-    Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
-</head>
-
-<body>
-
-  <!--==========================
-  Header
-  ============================-->
-  <header id="header">
-    <div class="container">
-
-      <div id="logo" class="pull-left">
-        <!-- <a href="#hero"><img src="img/logo.png" alt="" title="" /></img></a> -->
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <h1><a href="#hero">yStock</a></h1>
+    <header class="site-header">
+      <div class="shell nav">
+        <a class="brand" href="/" aria-label="yStock 首頁">
+          <img class="brand-logo" src="/img/ystock-logo.png" width="24" height="24" alt="" />
+          <span>yStock</span>
+        </a>
+        <nav class="nav-links nav-links-desktop" aria-label="主要導覽">
+          <a class="nav-link" href="/#features">產品特色</a>
+          <a class="nav-link" href="/guide.html">使用教學</a>
+          <a class="nav-link" href="/version.html">版本紀錄</a>
+          <a class="nav-link" href="/privacy.html">隱私權</a>
+        </nav>
+        <a class="button button-primary nav-cta" href="/#download">免費安裝</a>
+        <details class="mobile-nav">
+          <summary>選單</summary>
+          <nav class="mobile-nav-panel" aria-label="手機版主要導覽">
+            <a href="/#features">產品特色</a>
+            <a href="/guide.html">使用教學</a>
+            <a href="/version.html">版本紀錄</a>
+            <a href="/privacy.html">隱私權</a>
+            <a class="mobile-nav-cta" href="/#download">免費安裝</a>
+          </nav>
+        </details>
       </div>
+    </header>
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">首頁</a></li>
-          <li><a href="#about">特色</a></li>
-          <li><a href="#call-to-action">下載</a></li>
-          <!-- <li><a href="#portfolio">Portfolio</a></li> -->
-          <li><a href="#donate">贊助</a></li>
-          <!-- <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="menu-has-children"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li> -->
-          <li><a href="#contact">聯絡</a></li>
-          <li><a href="version.html">版本歷史</a></li>
-          <li><a href="privacy.html">隱私權政策</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
-
-  <!--==========================
-    Hero Section
-  ============================-->
-  <section id="hero">
-    <div class="hero-container">
-      <h1>yStock</h1>
-      <h2>方便、快速又簡單的看股票瀏覽器套件</h2>
-      <a href="#call-to-action" class="btn-get-started">下載安裝</a>
-    </div>
-  </section><!-- #hero -->
-
-  <main id="main">
-
-    <!--==========================
-      About Us Section
-    ============================-->
-    <section id="about">
-      <div class="container">
-        <div class="row about-container">
-
-          <div class="col-lg-6 content order-lg-1 order-2">
-            <h2 class="title">簡單使用且功能強大</h2>
+    <main id="main">
+      <section class="home-hero">
+        <div class="shell home-hero-layout">
+          <div class="home-hero-copy">
+            <h1>一個面板，掌握你的自選行情</h1>
             <p>
-              <div>yStock 為瀏覽器套件，目前支援 chrome/firefox，直接安裝即可使用</div>
-              <div>介面簡單好上手，支援台股、美股，是你上班偷看股票的好幫手！</div>
+              台股、美股與台灣期貨，價格、走勢、五檔與相關消息都整理在同一份清單。打開瀏覽器就能快速查看。
             </p>
-
-            <div class="icon-box wow fadeInUp">
-              <div class="icon"><i class="fa fa-sort"></i></div>
-              <h4 class="title"><a href="">拖曳排序</a></h4>
-              <p class="description">可手動拖曳，依照重要程度自行對個股排序</p>
+            <div class="home-hero-actions">
+              <a
+                class="button button-primary"
+                href="https://chromewebstore.google.com/detail/ystock/kdfomaiafhgjpidlcfhfpifmleaiacji"
+                target="_blank"
+                rel="noreferrer"
+              >安裝 Chrome 版</a>
+              <a
+                class="button button-secondary"
+                href="https://microsoftedge.microsoft.com/addons/detail/ystock/hcnkfnkkcaphgobjchbbcbomjppamfpn"
+                target="_blank"
+                rel="noreferrer"
+              >安裝 Edge 版</a>
             </div>
-
-            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-              <div class="icon"><i class="fa fa-folder"></i></div>
-              <h4 class="title"><a href="">分頁管理</a></h4>
-              <p class="description">內建七個分頁，讓你可以依照不同類別自行分類，追蹤股票更有效率！</p>
+            <a class="home-guide-link" href="/guide.html">查看使用教學 <span aria-hidden="true">→</span></a>
+          </div>
+          <figure class="home-hero-visual">
+            <figcaption>自選清單 · 台股、美股與期貨</figcaption>
+            <div class="home-hero-shot">
+              <img
+                src="/img/ystock-v26-list.png"
+                width="848"
+                height="762"
+                alt="yStock 自選清單，顯示台積電、元大台灣 50、Apple 與台指期近一"
+                fetchpriority="high"
+              />
             </div>
-
-            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-              <div class="icon"><i class="fa fa-bar-chart"></i></div>
-              <h4 class="title"><a href="">個股資訊</a></h4>
-              <p class="description">有最佳五檔、振幅、高低價…等等資訊，掌握行情趨勢</p>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
+          </figure>
         </div>
+      </section>
 
-      </div>
-    </section><!-- #about -->
-
-    <!--==========================
-      Facts Section
-    ============================-->
-    <!-- <section id="facts">
-      <div class="container wow fadeIn">
-        <div class="section-header">
-          <h3 class="section-title">Facts</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
-        <div class="row counters">
-
-  				<div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">232</span>
-            <p>Clients</p>
-  				</div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">521</span>
-            <p>Projects</p>
-  				</div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1,463</span>
-            <p>Hours Of Support</p>
-  				</div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">15</span>
-            <p>Hard Workers</p>
-  				</div>
-
-  			</div>
-
-      </div>
-    </section> -->
-    <!-- #facts -->
-
-    <!--==========================
-      Services Section
-    ============================-->
-    <!-- <section id="services">
-      <div class="container wow fadeIn">
-        <div class="section-header">
-          <h3 class="section-title">Services</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="box">
-              <div class="icon"><a href=""><i class="fa fa-desktop"></i></a></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-            <div class="box">
-              <div class="icon"><a href=""><i class="fa fa-bar-chart"></i></a></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-            <div class="box">
-              <div class="icon"><a href=""><i class="fa fa-paper-plane"></i></a></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="box">
-              <div class="icon"><a href=""><i class="fa fa-photo"></i></a></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-            <div class="box">
-              <div class="icon"><a href=""><i class="fa fa-road"></i></a></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-            <div class="box">
-              <div class="icon"><a href=""><i class="fa fa-shopping-bag"></i></a></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section> -->
-    <!-- #services -->
-
-    <!--==========================
-    Call To Action Section
-    ============================-->
-    <section id="call-to-action">
-      <div class="container wow fadeIn">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h3 class="cta-title">下載</h3>
-            <!-- <img src="img/chrome-webstore-badge.png" alt="" title="" /></img> -->
-            <p class="cta-text">目前提供 chrome/firefox 的擴充套件版本，可以各自的應用程式商店直接安裝</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-              <a href="https://chrome.google.com/webstore/detail/ystock/kdfomaiafhgjpidlcfhfpifmleaiacji">
-                <img class="store" src="img/chrome-webstore-badge.png" alt="" title="" /></img>
-              </a>
-            <!-- <a class="cta-btn align-middle" href="#">Call To Action</a> -->
-          </div>
-          <div class="col-md-6">
-              <a href="https://addons.mozilla.org/zh-TW/firefox/addon/ystock/">
-                <img class="store" src="img/firefox-addons-badge.png" alt="" title="" /></img>
-              </a>
-            <!-- <a class="cta-btn align-middle" href="#">Call To Action</a> -->
-          </div>
-        </div>
-
-      </div>
-    </section><!-- #call-to-action -->
-
-    <!--==========================
-      Portfolio Section
-    ============================-->
-    <!-- <section id="portfolio">
-      <div class="container wow fadeInUp">
-        <div class="section-header">
-          <h3 class="section-title">Portfolio</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
-        <div class="row">
-
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-logo">Logo</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row" id="portfolio-wrapper">
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-            <a href="">
-              <img src="img/portfolio/app1.jpg" alt="">
-              <div class="details">
-                <h4>App 1</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <a href="">
-              <img src="img/portfolio/web2.jpg" alt="">
-              <div class="details">
-                <h4>Web 2</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-            <a href="">
-              <img src="img/portfolio/app3.jpg" alt="">
-              <div class="details">
-                <h4>App 3</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-            <a href="">
-              <img src="img/portfolio/card1.jpg" alt="">
-              <div class="details">
-                <h4>Card 1</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-            <a href="">
-              <img src="img/portfolio/card2.jpg" alt="">
-              <div class="details">
-                <h4>Card 2</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <a href="">
-              <img src="img/portfolio/web3.jpg" alt="">
-              <div class="details">
-                <h4>Web 3</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-            <a href="">
-              <img src="img/portfolio/card3.jpg" alt="">
-              <div class="details">
-                <h4>Card 3</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-            <a href="">
-              <img src="img/portfolio/app2.jpg" alt="">
-              <div class="details">
-                <h4>App 2</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-            <a href="">
-              <img src="img/portfolio/logo1.jpg" alt="">
-              <div class="details">
-                <h4>Logo 1</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-            <a href="">
-              <img src="img/portfolio/logo3.jpg" alt="">
-              <div class="details">
-                <h4>Logo 3</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <a href="">
-              <img src="img/portfolio/web1.jpg" alt="">
-              <div class="details">
-                <h4>Web 1</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-            <a href="">
-              <img src="img/portfolio/logo2.jpg" alt="">
-              <div class="details">
-                <h4>Logo 2</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-    <!-- #portfolio -->
-
-    <!--==========================
-      Donate Section
-    ============================-->
-    <section id="donate">
-        <div class="container wow fadeInUp">
-          <div class="section-header">
-            <h3 class="section-title">贊助</h3>
-            <p class="section-description">
-                如果您喜歡這個小工具，可以到粉絲團留個言鼓勵一下<br>
-                若有幫助您賺到一些錢，不妨考慮贊助一下:D<br>
-                選擇使用「街口支付」或「LINE Pay」掃描以下的 QRCode，填入希望捐贈的金額送出即可<br>
-                捐多捐少不重要，有這心意我就非常感謝您了！<br>
+      <section class="section" id="features">
+        <div class="shell">
+          <div class="home-feature-intro">
+            <h2 class="home-section-title">自選行情，照你的方式整理</h2>
+            <p class="home-section-lead">
+              從自選清單到個股詳情，每天會看的行情都整理在同一個面板。
             </p>
           </div>
-  
-          <div class="code-list">
-            <div class="qrcode">
-              <h3>街口</h3>
-              <h4>900814264</h4>
-              <div class="pic"><img src="img/donate-jkos.jpg" alt=""></div>
-            </div>
-            <div class="qrcode">
-              <h3>一卡通 Money</h3>
-              <h4>25370177088</h4>
-              <div class="pic"><img src="img/donate-line.jpg" alt=""></div>
-            </div>
-            <div class="button">
-              <h3>歐付寶</h3>
-              <a href="https://p.opay.tw/u3khL"><img src="https://payment.opay.tw/Content/themes/WebStyle201404/images/allpay.png" /></a>
-            </div>
+          <div class="feature-ledger">
+            <article class="feature-ledger-item">
+              <span class="feature-ledger-index" aria-hidden="true">01</span>
+              <h3>七個自選分頁</h3>
+              <p>依照市場或關注主題分類，拖曳調整順序，快速回到最常看的商品。</p>
+              <div class="feature-tabs" aria-hidden="true"><b>1</b><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></div>
+            </article>
+            <article class="feature-ledger-item">
+              <span class="feature-ledger-index" aria-hidden="true">02</span>
+              <h3>跨市場搜尋</h3>
+              <p>輸入代號或名稱，將股票、ETF、大盤與期貨加入同一份清單。</p>
+              <code class="feature-query">2330 · AAPL · WTX&amp;</code>
+            </article>
+            <article class="feature-ledger-item">
+              <span class="feature-ledger-index" aria-hidden="true">03</span>
+              <h3>完整行情資訊</h3>
+              <p>從清單進入詳細資料，查看價格、五檔、區間走勢與支援的相關消息。</p>
+              <div class="feature-fields" aria-hidden="true"><span>今價</span><span>漲跌</span><span>高／低</span><span>走勢</span></div>
+            </article>
           </div>
-      </div>
-    </section><!-- #donate -->
+        </div>
+      </section>
 
-    <!--==========================
-      Team Section
-    ============================-->
-    <!-- <section id="team">
-      <div class="container wow fadeInUp">
-        <div class="section-header">
-          <h3 class="section-title">TEAM</h3>
-          <p class="section-description">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+      <section class="section section-tint" id="tutorials">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <h2>不知道代號？從這裡開始</h2>
+            </div>
+            <p class="section-intro">
+              新增的教學頁整理了安裝後的第一步，以及查找台股、大盤與台指期的常用方式。
+            </p>
+          </div>
+          <div class="tutorial-strip">
+            <article class="tutorial-item">
+              <code>2330</code>
+              <h3>搜尋台股與美股</h3>
+              <p>使用股票代號、ticker 或公司名稱找到商品。</p>
+              <a class="text-link" href="/guide.html#stocks">查看方法 →</a>
+            </article>
+            <article class="tutorial-item">
+              <code>^TWII</code>
+              <h3>加入台灣加權指數</h3>
+              <p>保留開頭的 ^，把大盤走勢加入自選分頁。</p>
+              <a class="text-link" href="/guide.html#market-index">查看方法 →</a>
+            </article>
+            <article class="tutorial-item">
+              <code>WTX&amp;</code>
+              <h3>查找台指期近一</h3>
+              <p>搜尋台灣期貨商品，加入清單後查看完整資訊。</p>
+              <a class="text-link" href="/guide.html#futures">查看方法 →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section store-band" id="download">
+        <div class="shell store-layout">
+          <div>
+            <h2 class="home-section-title">選擇你的瀏覽器</h2>
+            <p>yStock 目前提供 Chrome 與 Edge 版本，不需要註冊帳號即可開始使用。</p>
+          </div>
+          <div class="store-buttons">
+            <a
+              class="button button-primary"
+              href="https://chromewebstore.google.com/detail/ystock/kdfomaiafhgjpidlcfhfpifmleaiacji"
+              target="_blank"
+              rel="noreferrer"
+            >安裝 Chrome 版</a>
+            <a
+              class="button button-secondary"
+              href="https://microsoftedge.microsoft.com/addons/detail/ystock/hcnkfnkkcaphgobjchbbcbomjppamfpn"
+              target="_blank"
+              rel="noreferrer"
+            >安裝 Edge 版</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="donate">
+        <div class="shell">
+          <div class="donate-heading">
+            <h2 class="home-section-title">支持 yStock 持續維護</h2>
+            <p class="home-section-lead">
+              捐多捐少都不重要。如果 yStock 對你有幫助，可以選擇以下任一方式小額支持。
+            </p>
+          </div>
+          <div class="donate-options">
+            <figure class="donate-method">
+              <img
+                class="donate-qr"
+                src="/img/donate-jkos.jpg"
+                width="300"
+                height="300"
+                alt="yStock 街口支付贊助 QR Code"
+              />
+              <figcaption>
+                <h3>街口支付</h3>
+                <p>開啟街口支付掃描後，填入贊助金額即可。</p>
+              </figcaption>
+            </figure>
+            <figure class="donate-method">
+              <img
+                class="donate-qr"
+                src="/img/donate-opay-twqr.png"
+                width="395"
+                height="395"
+                alt="yStock TWQR 贊助 QR Code"
+              />
+              <figcaption>
+                <h3>TWQR</h3>
+                <p>支援台灣 Pay 與多種支援 TWQR 的行動支付。</p>
+              </figcaption>
+            </figure>
+            <article class="donate-method donate-opay">
+              <div class="opay-mark" aria-hidden="true">
+                <img src="/img/opay-logo.png" width="140" height="75" alt="" />
+              </div>
+              <div>
+                <h3>歐付寶</h3>
+                <p>透過歐付寶網頁完成付款，金額不拘。</p>
+              </div>
+              <a
+                class="button button-secondary"
+                href="https://p.opay.tw/u3khL"
+                target="_blank"
+                rel="noreferrer"
+              >前往歐付寶</a>
+            </article>
+          </div>
+          <p class="donate-community">
+            不方便贊助也沒關係，歡迎到
+            <a href="https://www.facebook.com/WuchaWeb/" target="_blank" rel="noreferrer">Facebook 粉絲團</a>
+            留言或分享使用心得。
           </p>
         </div>
+      </section>
 
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team-1.jpg" alt=""></div>
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+      <section class="section section-tint" id="contact">
+        <div class="shell contact-layout">
+          <div>
+            <h2 class="home-section-title">問題與建議</h2>
           </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team-2.jpg" alt=""></div>
-              <h4>Sarah Jhinson</h4>
-              <span>Product Manager</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team-3.jpg" alt=""></div>
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team-4.jpg" alt=""></div>
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:wucha.tw@gmail.com">寄送 Email</a>
+            <a
+              class="button button-secondary"
+              href="https://www.facebook.com/WuchaWeb/"
+              target="_blank"
+              rel="noreferrer"
+            >Facebook 粉絲團</a>
           </div>
         </div>
+      </section>
+    </main>
 
+    <footer class="site-footer">
+      <div class="shell footer-layout">
+        <div class="footer-copy">© 2017–2026 yStock · 由 Wucha 持續維護</div>
+        <nav class="footer-links" aria-label="頁尾導覽">
+          <a href="/guide.html">使用教學</a>
+          <a href="/version.html">版本紀錄</a>
+          <a href="/privacy.html">隱私權</a>
+          <a href="/#donate">支持 yStock</a>
+          <a href="mailto:wucha.tw@gmail.com">聯絡</a>
+        </nav>
       </div>
-    </section> -->
-    <!-- #team -->
-
-    <!--==========================
-      Contact Section
-    ============================-->
-    <section id="contact">
-      <div class="container wow fadeInUp">
-        <div class="section-header">
-          <h3 class="section-title">聯絡方式</h3>
-          <p class="section-description">有任何問題或建議都歡迎寫信或到粉絲團留言歐！</p>
-        </div>
-        <div class="row justify-content-center">
-            <div class="social-links">
-                <a href="https://www.facebook.com/WuchaWeb/" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="mailto:wucha.tw@gmail.com" class="instagram"><i class="fa fa-envelope"></i></a>
-            </div>
-        </div>
-      </div>
-
-      <!-- Uncomment below if you wan to use dynamic maps -->
-      <!--<div id="google-map" data-latitude="40.713732" data-longitude="-74.0092704"></div>-->
-
-      <!-- <div class="container wow fadeInUp">
-        <div class="row justify-content-center">
-
-          <div class="col-lg-3 col-md-4">
-
-            <div class="info">
-              <div>
-                <i class="fa fa-map-marker"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
-              </div>
-
-              <div>
-                <i class="fa fa-envelope"></i>
-                <p>info@example.com</p>
-              </div>
-
-              <div>
-                <i class="fa fa-phone"></i>
-                <p>+1 5589 55488 55s</p>
-              </div>
-            </div>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            </div>
-
-          </div>
-
-          <div class="col-lg-5 col-md-8">
-            <div class="form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-              </form>
-            </div>
-          </div>
-
-        </div>
-
-      </div> -->
-    </section><!-- #contact -->
-
-  </main>
-
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Wucha</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
-        -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- #footer -->
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <!-- Uncomment below if you want to use dynamic Google Maps -->
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script> -->
-
-  <!-- Contact Form JavaScript File -->
-  <!--<script src="contactform/contactform.js"></script>-->
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54749221-7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-54749221-7');
-  </script>
-</body>
+    </footer>
+    <script type="module" src="/src/navigation.js"></script>
+  </body>
 </html>
