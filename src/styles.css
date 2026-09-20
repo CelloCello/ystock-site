@@ -1806,6 +1806,15 @@ a {
     white-space: nowrap;
   }
 
+  .comparison.display-size-table {
+    display: table;
+    white-space: normal;
+  }
+
+  .display-size-table :is(th, td):nth-child(-n + 2) {
+    white-space: nowrap;
+  }
+
   .release {
     grid-template-columns: 1fr;
     gap: 0.75rem;
